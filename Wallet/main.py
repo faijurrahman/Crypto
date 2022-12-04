@@ -4,6 +4,15 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
+#Source: https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md
+def print_WordList_BIP39_HDWallet():
+    wordlist = open('HDWallet_BIP39_Word_List_English.txt', 'r')
+    print("List of 2048 English Words from BIP39:")
+    index = 0
+    for word in wordlist.readlines():
+        index += 1
+        print(index, ":", word.strip())
+    
 #python3 -m pip install bitcoinlib
 def create_BitcoinLib_Wallet():
     from bitcoinlib.wallets import Wallet
@@ -41,7 +50,7 @@ def create_BIP32_PyWallet():
 
 
 
-#Source: https: // github.com / meherett / python - hdwallet
+#Source: https://github.com/meherett/python-hdwallet
 #python3 -m pip install hdwallet
 def create_Ethereum_BIP44_HDWallet():
     from hdwallet import BIP44HDWallet
@@ -64,7 +73,7 @@ def create_Ethereum_BIP44_HDWallet():
     # Clean default BIP44 derivation indexes/paths
     bip44_hdwallet.clean_derivation()
 
-    print("Mnemonic:", bip44_hdwallet.mnemonic())
+    print("\n\nEthereum Wallet's Mnemonic:", bip44_hdwallet.mnemonic())
     print("Base HD Path:  m/44'/60'/0'/0/{address_index}", "\n")
 
     # Get Ethereum BIP44HDWallet information's from address index
@@ -84,7 +93,7 @@ def create_Ethereum_BIP44_HDWallet():
 
 
 
-#Source: https: // github.com / meherett / python - hdwallet
+#Source: https://github.com/meherett/python-hdwallet
 #python3 -m pip install hdwallet
 def create_BITCOIN_BIP44_HDWallet():
     from hdwallet import HDWallet
@@ -119,24 +128,15 @@ def create_BITCOIN_BIP44_HDWallet():
     hdwallet.from_index(0)
     hdwallet.from_index(0)
 
-    # Print all Bitcoin HDWallet information's
+    print("\n\nPrinting all information's of Bitcoin HDWallet")
     print(json.dumps(hdwallet.dumps(), indent=4, ensure_ascii=False))
-
-#Source: https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md
-def print_WordList_BIP39_HDWallet():
-    wordlist = open('HDWallet_BIP39_Word_List_English.txt', 'r')
-    print("BIP39: List of 2048 English Words:")
-    index = 0
-    for word in wordlist.readlines():
-        index += 1
-        print(index, ":", word.strip())
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # !/usr/bin/env python3
 
-    # Check document of BIP32 (HDWallet), BIP39 (2048 wordlist), BIP44 (Hirarchical HDWallet)
+    # Check document of BIP32 (HDWallet), BIP39 (2048 wordlist), BIP44 (Hierarchical HDWallet)
     # More details here: https://github.com/bitcoin/bips
 
     #Step-by-Step explanation: https://medium.com/cosmostation/the-magic-behind-a-mnemonic-phrase-and-hd-wallets-let-us-explain-43d9c97f6098
