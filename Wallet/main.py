@@ -134,6 +134,8 @@ if __name__ == '__main__':
     # Check document of BIP32 (HDWallet), BIP39 (2048 wordlist), BIP44 (Hirarchical HDWallet)
     # More details here: https://github.com/bitcoin/bips
 
+    #Step-by-Step explanation: https://medium.com/cosmostation/the-magic-behind-a-mnemonic-phrase-and-hd-wallets-let-us-explain-43d9c97f6098
+
     #create_BitcoinLib_Wallet() #Using Bitcoin Library. Note: not robust code
     #create_BIP32_PyWallet() #Using PyWallet. Note: Broken PyWallet library
     create_Ethereum_BIP44_HDWallet() #Using HDWallet Library
