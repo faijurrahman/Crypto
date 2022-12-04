@@ -124,7 +124,12 @@ def create_BITCOIN_BIP44_HDWallet():
 
 #Source: https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md
 def print_WordList_BIP39_HDWallet():
-    open(HDWallet_BIP39_Word_List_English.txt)
+    wordlist = open('HDWallet_BIP39_Word_List_English.txt', 'r')
+    print("BIP39: List of 2048 English Words:")
+    index = 0
+    for word in wordlist.readlines():
+        index += 1
+        print(index, ":", word.strip())
 
 
 # Press the green button in the gutter to run the script.
@@ -136,9 +141,11 @@ if __name__ == '__main__':
 
     #Step-by-Step explanation: https://medium.com/cosmostation/the-magic-behind-a-mnemonic-phrase-and-hd-wallets-let-us-explain-43d9c97f6098
 
+    print_WordList_BIP39_HDWallet()
     #create_BitcoinLib_Wallet() #Using Bitcoin Library. Note: not robust code
     #create_BIP32_PyWallet() #Using PyWallet. Note: Broken PyWallet library
     create_Ethereum_BIP44_HDWallet() #Using HDWallet Library
     create_BITCOIN_BIP44_HDWallet() #Using HDWallet Library
+
 
 
