@@ -3,6 +3,8 @@ python3 -m pip install py-evm
 OR
 Get the package source code from here: git clone --recursive https://github.com/ethereum/py-evm.git
 
+Details documentaion of py-evm can be found here: https://py-evm.readthedocs.io/en/latest/guides/quickstart.html
+
 
 
 
