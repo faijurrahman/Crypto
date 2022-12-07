@@ -1,7 +1,7 @@
-
-
 Install py-evm before running the test with command:
 python3 -m pip install py-evm
+OR
+Get the package source code from here: git clone --recursive https://github.com/ethereum/py-evm.git
 
 
 
